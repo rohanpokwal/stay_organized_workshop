@@ -23,36 +23,44 @@ let displayUserTask = document.querySelector("#toDoList");
 
 let toDosByUser = await getTaskByUser();
 
+let userDropdown = document.querySelector("#userSelect");
 
-toDosByUser.forEach(()=>{
+displayUserTask.innerHTML="";
 
-
-
-})
-
-
-if(toDosByUser){
+toDosByUser.forEach((task)=>{
+   
+        displayUserTask.innerHTML += `
+        <hr>
+        Category: ${task.category}<br>
+        Description: ${task.description}<br>
+        Deadline: ${task.deadline}<br>
+        Priority: ${task.priority}<br>
+        Completed: ${task.completed}`
+        
     
-    displayUserTask.innerHTML= "hi"
+});
 
-}else{
+if(userDropdown.value === "0"){
 
-    displayUserTask.innerHTML = "No current Tasks"
+    displayUserTask.innerHTML="";
+}
+   
+console.log(userDropdown.value)
 }
 
-
-}
 let displayUser = async ()=>{
 
     //grabbing dropdown from html
     let userDropdown = document.querySelector("#userSelect");
 
+   
+     
     //getting a hold of the data fetched to display
     let allToDos = await getAllUsers();
 
      //creating a default option to the dropwdown
      let defaultOption = document.createElement("option");
-     defaultOption.value = "";
+     defaultOption.value = "0";
      
      defaultOption.innerText = "----Select User----";
   
@@ -96,9 +104,9 @@ let getAllUsers= async () =>{
 
 let getTaskByUser = async ()=>{
 
-    let userDropdown = document.querySelector("#userSelect");
-    try {
-        let response = await fetch(`http://localhost:8083/api/todos/byuser/${userDropdown.value}`);
+    let userDropdown = document.querySelector("#userSelect").value
+        try {
+        let response = await fetch("http://localhost:8083/api/todos/byuser/"+ userDropdown);
         let list = await response.json();
 
         return list;
