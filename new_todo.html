@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Data</title>
+  </head>
+  <body>
+    <!-- This is the form to add the data -->
+
+    <h1>Add New ToDo Task</h1>
+    <form id="addUserForm">
+      <div>
+        <label for="userDropdown">User:</label>
+        <select id="userDropdown" name="userid">
+          <!-- User options will be populated here by JavaScript -->
+        </select>
+      </div>
+
+      <div>
+        <label for="categoryDropdown">Category:</label>
+        <select id="categoryDropdown" name="category">
+          <!-- Category options will be populated here by JavaScript -->
+        </select>
+      </div>
+      <div>
+        <label for="description">Description:</label>
+        <textarea id="description" name="description"></textarea>
+      </div>
+      <div>
+        <label for="deadline">Deadline:</label>
+        <input
+          type="text"
+          id="deadline"
+          name="deadline"
+          placeholder="YYYY-MM-DD"
+        />
+      </div>
+
+      <div>
+        <label for="priority">Priority:</label>
+        <select id="priority" name="priority">
+          <option value="Low">Low</option>
+          <option value="Medium">Medium</option>
+          <option value="High">High</option>
+        </select>
+      </div>
+
+      <button type="submit">Add Task</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script src="scripts/new_todo.js"></script>
+  </body>
+</html>
