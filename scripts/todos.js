@@ -19,12 +19,15 @@ window.onload=()=>{
 
 let displayTask = async ()=>{
 
+//grabbing the div where the results will go 
 let displayUserTask = document.querySelector("#toDoList");
 
+//fetching the data we called for through the link
 let toDosByUser = await getTaskByUser();
 
 let userDropdown = document.querySelector("#userSelect");
 
+//reset the options
 displayUserTask.innerHTML="";
 
 toDosByUser.forEach((task)=>{
