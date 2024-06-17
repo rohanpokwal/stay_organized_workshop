@@ -81,12 +81,12 @@ const addAnewToDo = async (event) => {
     console.log(newList);
 
     //Display the Result
-    /* result.innerHTML = `<p>You have successfully added the following </p> 
-    <p>user Id: ${newList.userId}</p>
-    <p>Title: ${newList.title}</p>
-    <p>Completed: ${newList.completeStatus}</p>
-    <p>ID: ${newList.id}</p> 
-    `;*/
+    result.innerHTML = `<p>You have successfully added the following </p> 
+    <p>Category: ${newList.category}</p>
+    <p>Description: ${newList.description}</p>
+    <p>Deadline: ${newList.deadline}</p>
+    <p>Priority: ${newList.priority}</p> 
+    `;
   } catch {
     //what the hell happend
     result.innerHTML = "Hang on something went wrong";
