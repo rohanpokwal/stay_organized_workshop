@@ -23,8 +23,21 @@ function togglePasswordVisibility(fieldId, show) {
     }
 }
 
+function checkPasswordMatch() {
+    let password = document.getElementById("password").value;
+    let retypePassword = document.getElementById("retypePassword").value;
+
+    if (password !== retypePassword) {
+        document.getElementById("retypePassword").setCustomValidity("Passwords must match");
+    } else {
+        document.getElementById("retypePassword").setCustomValidity("");
+    }
+}
+
 let createAUser = async (event) => {
     event.preventDefault();
+
+    checkPasswordMatch();
 
     let formData = new FormData(event.target);
     let formDataAsObject = Object.fromEntries(formData);
