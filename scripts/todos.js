@@ -46,6 +46,7 @@ toDosByUser.forEach((task)=>{
 if(userDropdown.value === "0"){
 
     displayUserTask.innerHTML="";
+
 }
    
 console.log(userDropdown.value)
