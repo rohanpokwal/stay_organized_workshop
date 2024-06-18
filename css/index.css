@@ -119,3 +119,11 @@ footer {
     scrollbar-color: rgb(33 37 41);
     scroll-behavior: auto;
 }
+
+.scroll-box {
+    width: 1290px; /* Width of the box */
+    height: 300px; /* Height of the box */
+    overflow: auto; /* Enable scrolling */
+    border: 1px solid #ccc; /* Border style */
+    padding: 10px; /* Padding inside the box */
+}

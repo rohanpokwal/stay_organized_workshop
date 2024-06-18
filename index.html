@@ -16,27 +16,30 @@
 </head>
 
 <body class="bg-dark">
-    <div id="main">
-        <div id="wrap">
-            <header>
-                <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
-                    <div class="container-fluid">
-                        <a class="navbar-brand" href="index.html">Stay Organized!</a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                            <div class="navbar-nav">
-                                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                                <a class="nav-link" href="todos.html">USER TO DO TASKS</a>
-                                <a class="nav-link" href="new_todo.html">ADD</a>
-                            </div>
+   <!-- nav bar -->
+   <div id="todo">
+    <div id="wrap">
+        <header>
+            <nav class="navbar navbar-expand-lg bg-dark"data-bs-theme="dark" >
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html" style="max-width: 20%;">
+                         <img src="images/logo.png" alt="logo image" class="img-fluid"></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav">
+                            <a class="nav-link active" aria-current="page" href="index.html" style="font-family:Roboto">HOME</a>
+                            <a class="nav-link" href="todos.html" style="font-family:Roboto">USERS TASKS</a>
+                            <a class="nav-link" href="new_todo.html" style="font-family:Roboto">ADD NEW TASK</a>
+                            <a class="nav-link " href="addAUser.html" style="font-family:Roboto">ADD NEW USER</a>
                         </div>
                     </div>
-                </nav>
-            </header>
+                </div>
+            </nav>
+        </header>
 
             <section id="carousel-section">
 
@@ -125,15 +128,15 @@
                                     <img src="images/organized2.webp" class="card-img-top"
                                         alt="">
                                     <div class="card-body">
-                                        <h2 class="text-center card-title" id="title">User to do task</h5>
-                                            <p class="text-center card-text">info here</p>
+                                        <h2 class="text-center card-title" id="title">User to do task</h2>
+                                            <p class="text-center card-text"></p>
                                             <div class="d-flex justify-content-center card-footer">
                                                 <a href="todos.html" class="btn btn-dark">User to do task
                                                 </a>
                                             </div>
                                     </div>
                                 </div>
-                            </div>
+                 </div>
 
                             <div class="col">
                                 <div class="h-100 card">
@@ -141,7 +144,7 @@
                                         alt="">
                                     <div class="card-body">
                                         <h2 class="text-center card-title" id="title">New to do tasks</h5>
-                                            <p class="text-center card-text">info here</p>
+                                            <p class="text-center card-text"></p>
                                             <div class="d-flex justify-content-center card-footer">
                                                 <a href="new_todo.html" class="btn btn-dark">New to do tasks</a>
                                             </div>
@@ -160,8 +163,9 @@
                     © 2024 - Stay Organized
                 </div>
             </div>
+        </footer>
     </div>
-    </footer>
+   
 
 
     <!-- Bootstrap JavaScript -->
